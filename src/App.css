@@ -41,3 +41,10 @@
 input {
   font-size: 20px;
 }
+
+.row {
+  display: flex;
+  width: 300px;
+  max-width: 400px;
+  justify-content: space-between;
+}
