@@ -1,7 +1,8 @@
 import axios from "axios"
 
 export type StatsType = {
-    countries_stat: Stats[]
+    countries_stat: Stats[],
+    statistic_taken_at: Date
 }
 
 export type Stats = {

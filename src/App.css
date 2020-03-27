@@ -1,3 +1,7 @@
+body {
+    background-color: #49274A;
+}
+
 .App {
   text-align: center;
 }
@@ -15,14 +19,33 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding-top: 60px;
+  background-color: #49274A;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Content {
+  background-color: rgb(87, 47, 88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Country {
+  margin-bottom: 40px;
+}
+
+.Filter {
+  margin: 50px;
 }
 
 .App-link {
@@ -38,8 +61,35 @@
   }
 }
 
+.CountryHeading {
+  font-size: 40px;
+  font-weight: 800;
+  width: 300px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+  display: block;
+  color: #CF6766;
+}
+
+.Country {
+  margin-bottom: 50px;
+}
+
 input {
   font-size: 20px;
+}
+
+.Footer {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  transform: translateY(80%)
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: white;
 }
 
 .row {

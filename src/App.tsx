@@ -3,6 +3,8 @@ import corona from './coronavirus.png';
 import './App.css';
 import { getCasesByCountry, Stats } from './Service'
 import { Grid } from './Grid';
+import { Spinner } from 'react-rainbow-components';
+
 
 function App() {
 
@@ -13,7 +15,6 @@ function App() {
     getCasesByCountry()
       .then((response) => {
         const { countries_stat } = response.data
-        console.log('RESPONSE: ', countries_stat)
         setAllStats(countries_stat)
         setStats(countries_stat)
       })
@@ -30,14 +31,25 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={corona} className="App-logo" alt="logo" />
-        <input type="text" onChange={(e) => filterStats(e.target.value)} />
-        {stats && stats.map((country: Stats) => (
-          <>
-            <h2>{country.country_name}</h2>
-            <Grid fields={['cases', 'deaths', 'new_deaths', 'total_recovered']} data={country}/>
-          </>
-        ))}
+        <h1>Corona Virus Statistics</h1>
       </header>
+      <div className="Content">
+        {!stats && <Spinner size="large" />}
+        <div className="Filter">
+          <label>Filter by country: &nbsp;
+            <input type="text" onChange={(e) => filterStats(e.target.value)} />
+          </label>
+        </div>
+        {stats && stats.map((country: Stats) => country && (
+          <div className="Country">
+            <p className="CountryHeading">{country.country_name}</p>
+            <Grid fields={['new_deaths', 'deaths', 'new_cases', 'cases', 'total_recovered']} data={country} />
+          </div>
+        ))}
+      </div>
+      <div className="Footer">
+        <a href="https://noego.io" target="_blank" rel="noopener noreferrer">noego.io</a>&nbsp;|&nbsp;2020
+      </div>
     </div>
   );
 }

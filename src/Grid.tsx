@@ -4,13 +4,13 @@ import { Stats, Labels } from "./Service"
 export const Grid = (props: { fields: (keyof Stats)[], data: Stats }) => {
     const { fields, data } = props
     return (
-    <>
-        {fields.map((field) => (
-            <div className="row">
+    <div>
+        {fields.map((field, index) => (
+            <div className="row" key={index}>
                 <span>{Labels[field]}</span>
                 <span>{data[field]}</span>
             </div>
         ))}
-    </>
+    </div>
     )
 }
