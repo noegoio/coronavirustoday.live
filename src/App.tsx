@@ -3,7 +3,6 @@ import corona from './coronavirus.png';
 import './App.css';
 import { getCasesByCountry, Stats } from './Service'
 import { Grid } from './Grid';
-import { Spinner } from 'react-rainbow-components';
 
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
         <h1>Corona Virus Statistics</h1>
       </header>
       <div className="Content">
-        {!stats && <Spinner size="large" />}
         <div className="Filter">
           <label>Filter by country: &nbsp;
             <input type="text" onChange={(e) => filterStats(e.target.value)} />
