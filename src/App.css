@@ -1,5 +1,9 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
-    background-color: #49274A;
+    background-color: #F4F6F7;
 }
 
 .App {
@@ -7,9 +11,12 @@ body {
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  margin-bottom: 40px;
+  height: 5vmin;
+  margin: 1rem;
+}
+
+.donate {
+  height: 3vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -18,34 +25,62 @@ body {
   }
 }
 
-.App-header {
-  padding-top: 60px;
+.App-menu {
+  padding-top: 1rem;
   background-color: #49274A;
-  min-height: 60vh;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1rem + 2vmin);
+  color: white;
+}
+
+.App-header {
+  padding-top: 1rem;
+  padding: 3rem 0;
+  background-color: #082942;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1rem + 2vmin);
   color: white;
 }
 
 .Content {
-  background-color: rgb(87, 47, 88);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1rem + 2vmin);
   color: white;
 }
 
+.heading {
+  margin: 0;
+}
+
+.header-content {
+  display: flex;
+}
+
 .Country {
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  color: #4F5D75;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
 }
 
 .Filter {
-  margin: 50px;
+  margin: 5rem;
+  color: #212121;
+}
+
+.filter-input {
+  border-radius: 0.4rem;
+  text-align: center;
 }
 
 .App-link {
@@ -62,21 +97,23 @@ body {
 }
 
 .CountryHeading {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 800;
-  width: 300px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid white;
+  width: 30rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid #5B2333;
+  margin: 1rem 0px 2rem;
   display: block;
-  color: #CF6766;
+  color: #003C8C;
 }
 
 .Country {
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 input {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .Footer {
@@ -84,7 +121,17 @@ input {
   display: flex;
   justify-content: center;
   color: white;
-  transform: translateY(80%)
+  background-color: #082942;
+  padding-top: 5vh;
+  transform: translateY(80%);
+  font-size: 1.6rem;
+}
+
+.donate {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  font-size: 1rem;
 }
 
 a, a:visited {
@@ -92,9 +139,22 @@ a, a:visited {
   color: white;
 }
 
+a:hover {
+  color: #009180;
+}
+
 .row {
   display: flex;
-  width: 300px;
-  max-width: 400px;
+  width: 30rem;
+  max-width: 45rem;
   justify-content: space-between;
+}
+
+.row-label {
+  font-size: 2.5rem;
+}
+
+.row-stats {
+  color: #293035;
+  font-size: 2.5rem;
 }

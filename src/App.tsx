@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import corona from './coronavirus.png';
+import kofi from './kofi.png';
 import './App.css';
 import { getCasesByCountry, Stats } from './Service'
 import { Grid } from './Grid';
@@ -29,14 +30,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={corona} className="App-logo" alt="logo" />
-        <h1>Corona Virus Statistics</h1>
+        <div className="header-content">
+          <img src={corona} className="App-logo" alt="logo" />
+          <h1 className="heading">Corona Virus Statistics</h1>
+        </div>
+        <div className="donate">
+          <a href="https://ko-fi.com/noego" target="_blank" rel="noopener noreferrer">
+            <img src={kofi} className="donate" alt="logo" />
+          </a>
+        </div>
       </header>
       <div className="Content">
         <div className="Filter">
-          <label>Filter by country: &nbsp;
-            <input type="text" onChange={(e) => filterStats(e.target.value)} />
-          </label>
+            <input type="text" className="filter-input" placeholder="filter by country" onChange={(e) => filterStats(e.target.value)} />
         </div>
         {stats && stats.map((country: Stats) => country && (
           <div className="Country">
@@ -46,7 +52,7 @@ function App() {
         ))}
       </div>
       <div className="Footer">
-        <a href="https://noego.io" target="_blank" rel="noopener noreferrer">noego.io</a>&nbsp;|&nbsp;2020
+        <a href="https://noego.io" target="_blank" rel="noopener noreferrer">noego.io</a>&nbsp;@&nbsp;2020
       </div>
     </div>
   );

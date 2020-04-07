@@ -7,8 +7,8 @@ export const Grid = (props: { fields: (keyof Stats)[], data: Stats }) => {
     <div>
         {fields.map((field, index) => (
             <div className="row" key={index}>
-                <span>{Labels[field]}</span>
-                <span>{data[field]}</span>
+                <span className="row-label">{Labels[field]}</span>
+                <span className="row-stats">{data[field]}</span>
             </div>
         ))}
     </div>
