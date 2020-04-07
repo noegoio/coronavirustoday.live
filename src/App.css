@@ -124,7 +124,12 @@ input {
   background-color: #082942;
   padding-top: 5vh;
   transform: translateY(80%);
-  font-size: 1.6rem;
+  font-size: 2rem;
+}
+
+.noego {
+  height: 3vmin;
+  margin: 0 0.2rem;
 }
 
 .donate {

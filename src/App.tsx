@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import corona from './coronavirus.png';
 import kofi from './kofi.png';
+import noego from './noego.png';
 import './App.css';
 import { getCasesByCountry, Stats } from './Service'
 import { Grid } from './Grid';
@@ -52,6 +53,7 @@ function App() {
         ))}
       </div>
       <div className="Footer">
+        <img src={noego} className="noego" alt="logo" />
         <a href="https://noego.io" target="_blank" rel="noopener noreferrer">noego.io</a>&nbsp;@&nbsp;2020
       </div>
     </div>
