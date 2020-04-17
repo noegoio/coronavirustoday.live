@@ -45,7 +45,7 @@ function App() {
         <div className="Filter">
             <input type="text" className="filter-input" placeholder="filter by country" onChange={(e) => filterStats(e.target.value)} />
         </div>
-        {stats && stats.map((country: Stats) => country && (
+        {stats && stats.map((country: Stats) => country && country.country_name && (
           <div className="Country">
             <p className="CountryHeading">{country.country_name}</p>
             <Grid fields={['new_deaths', 'deaths', 'new_cases', 'cases', 'total_recovered']} data={country} />
